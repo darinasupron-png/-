@@ -23,7 +23,6 @@
             --pink-dark: #e84393;
             --pink-light: #ff9ecb;
             --pink-pale: #ffd6e7;
-            --pink-bg: #1a0a14;
             --dark: #1a0a14;
             --dark-card: #2a1422;
             --text-light: #ffe8f0;
@@ -158,7 +157,7 @@
             position: absolute;
             font-size: 40px;
             animation: floatSticker 25s infinite ease-in-out;
-            opacity: 0.25;
+            opacity: 0.2;
             user-select: none;
         }
 
@@ -167,84 +166,84 @@
             left: 5%;
             animation-delay: 0s;
             font-size: 50px;
-            opacity: 0.2;
+            opacity: 0.18;
         }
         .sticker:nth-child(2) {
             top: 15%;
             right: 8%;
             animation-delay: -3s;
             font-size: 35px;
-            opacity: 0.18;
+            opacity: 0.15;
         }
         .sticker:nth-child(3) {
             bottom: 20%;
             left: 3%;
             animation-delay: -6s;
             font-size: 45px;
-            opacity: 0.2;
+            opacity: 0.18;
         }
         .sticker:nth-child(4) {
             bottom: 30%;
             right: 5%;
             animation-delay: -9s;
             font-size: 38px;
-            opacity: 0.22;
+            opacity: 0.2;
         }
         .sticker:nth-child(5) {
             top: 45%;
             left: 12%;
             animation-delay: -2s;
             font-size: 30px;
-            opacity: 0.15;
+            opacity: 0.12;
         }
         .sticker:nth-child(6) {
             top: 55%;
             right: 12%;
             animation-delay: -5s;
             font-size: 42px;
-            opacity: 0.18;
+            opacity: 0.15;
         }
         .sticker:nth-child(7) {
             top: 30%;
             left: 50%;
             animation-delay: -8s;
             font-size: 28px;
-            opacity: 0.12;
+            opacity: 0.1;
         }
         .sticker:nth-child(8) {
             bottom: 10%;
             left: 30%;
             animation-delay: -4s;
             font-size: 36px;
-            opacity: 0.18;
+            opacity: 0.15;
         }
         .sticker:nth-child(9) {
             top: 5%;
             left: 30%;
             animation-delay: -7s;
             font-size: 32px;
-            opacity: 0.15;
+            opacity: 0.12;
         }
         .sticker:nth-child(10) {
             bottom: 40%;
             right: 20%;
             animation-delay: -1s;
             font-size: 34px;
-            opacity: 0.18;
+            opacity: 0.15;
         }
         .sticker:nth-child(11) {
             top: 70%;
             left: 20%;
             animation-delay: -10s;
             font-size: 40px;
-            opacity: 0.15;
+            opacity: 0.12;
         }
         .sticker:nth-child(12) {
             top: 10%;
             right: 25%;
             animation-delay: -12s;
             font-size: 30px;
-            opacity: 0.18;
+            opacity: 0.15;
         }
 
         @keyframes floatSticker {
@@ -694,7 +693,7 @@
         /* ===== КАРТОЧКИ "ОБО МНЕ" ===== */
         .about-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 20px;
             margin-top: 10px;
         }
@@ -727,7 +726,7 @@
         .about-card:hover {
             transform: translateY(-6px);
             border-color: var(--border-glow);
-            box-shadow: 0 12px 40px rgba(255, 107, 157, 0.06);
+            box-shadow: 0 12px 40px rgba(255, 107, 157, 0.08);
         }
 
         .about-card:hover::before {
@@ -1154,3 +1153,474 @@
 
                     <!-- Слайд 1 -->
                     <div class="slide">
+                        <div class="slide-content">
+                            <div class="tech-badge">HTML • CSS • JS</div>
+                            <h3>Личный сайт-визитка</h3>
+                            <p>
+                                Мой первый полноценный сайт — современная визитка с
+                                анимациями, адаптивным дизайном и слайдером.
+                                Сделала сама с нуля.
+                            </p>
+                            <a href="#" class="project-link">🔗 Посмотреть →</a>
+                        </div>
+                        <div class="slide-icon">🌐</div>
+                    </div>
+
+                    <!-- Слайд 2 -->
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="tech-badge">Python • Telegram API</div>
+                            <h3>Телеграм-бот для учёбы</h3>
+                            <p>
+                                Бот, который напоминает о домашних заданиях
+                                и помогает планировать день. Умеет отправлять
+                                уведомления и вести дневник задач.
+                            </p>
+                            <a href="#" class="project-link">🔗 Посмотреть →</a>
+                        </div>
+                        <div class="slide-icon">🤖</div>
+                    </div>
+
+                    <!-- Слайд 3 -->
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="tech-badge">HTML • CSS • Figma</div>
+                            <h3>Дизайн-макет для стартапа</h3>
+                            <p>
+                                Нарисовала в Figma интерфейс для приложения
+                                по изучению иностранных слов. Продумала все
+                                экраны и прототип.
+                            </p>
+                            <a href="#" class="project-link">🔗 Посмотреть →</a>
+                        </div>
+                        <div class="slide-icon">🎨</div>
+                    </div>
+
+                    <!-- Слайд 4 -->
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="tech-badge">JavaScript • Canvas</div>
+                            <h3>Игра на чистом JS</h3>
+                            <p>
+                                Небольшая аркада с шариками. Написала на
+                                JavaScript без библиотек — всё с нуля.
+                            </p>
+                            <a href="#" class="project-link">🔗 Посмотреть →</a>
+                        </div>
+                        <div class="slide-icon">🎮</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Управление слайдером -->
+            <div class="slider-controls">
+                <button class="slider-btn" id="prevBtn">‹</button>
+                <div class="slider-dots" id="dotsContainer"></div>
+                <button class="slider-btn" id="nextBtn">›</button>
+            </div>
+        </section>
+
+        <!-- ===== НАВЫКИ ===== -->
+        <section class="section" id="skills">
+            <div class="section-label">💻 Технологии</div>
+            <h2 class="section-title">Что я <span class="highlight">изучаю</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="icon">🟦</div>
+                    <div class="name">HTML &amp; CSS</div>
+                    <div class="level">Уверенно владею</div>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">🟨</div>
+                    <div class="name">JavaScript</div>
+                    <div class="level">Продолжаю учить</div>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">🐍</div>
+                    <div class="name">Python</div>
+                    <div class="level">Базовый уровень</div>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">⚛️</div>
+                    <div class="name">React</div>
+                    <div class="level">Начала изучать</div>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">🎨</div>
+                    <div class="name">Figma</div>
+                    <div class="level">Дизайн интерфейсов</div>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">🐙</div>
+                    <div class="name">Git / GitHub</div>
+                    <div class="level">Работаю с репозиториями</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== КАРТОЧКИ "ОБО МНЕ" ===== -->
+        <section class="section" id="about">
+            <div class="section-label">💜 Обо мне</div>
+            <h2 class="section-title">Мои <span class="highlight">увлечения</span></h2>
+            <div class="about-cards">
+
+                <!-- Карточка: Танцы -->
+                <div class="about-card" data-modal="dance">
+                    <span class="icon">💃</span>
+                    <div class="title">Танцы</div>
+                    <div class="subtitle">С 4 лет. Победитель конкурсов</div>
+                    <div class="click-hint">👆 Нажми для подробностей</div>
+                </div>
+
+                <!-- Карточка: Рисование -->
+                <div class="about-card" data-modal="draw">
+                    <span class="icon">🎨</span>
+                    <div class="title">Рисование</div>
+                    <div class="subtitle">С преподавателем. Хочу в профессию</div>
+                    <div class="click-hint">👆 Нажми для подробностей</div>
+                </div>
+
+                <!-- Карточка: Коты -->
+                <div class="about-card" data-modal="cats">
+                    <span class="icon">🐱</span>
+                    <div class="title">Коты</div>
+                    <div class="subtitle">Обожаю. Лажу с животными</div>
+                    <div class="click-hint">👆 Нажми для подробностей</div>
+                </div>
+
+                <!-- Карточка: Закаты -->
+                <div class="about-card" data-modal="sunset">
+                    <span class="icon">🌅</span>
+                    <div class="title">Закаты</div>
+                    <div class="subtitle">Фотографирую. Все в восторге!</div>
+                    <div class="click-hint">👆 Нажми для подробностей</div>
+                </div>
+
+                <!-- Карточка: Сап-борд -->
+                <div class="about-card" data-modal="sup">
+                    <span class="icon">🏄‍♀️</span>
+                    <div class="title">Сап-борд</div>
+                    <div class="subtitle">Лето. Речка. Свобода</div>
+                    <div class="click-hint">👆 Нажми для подробностей</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== МОДАЛЬНЫЕ ОКНА ===== -->
+
+        <!-- Модалка: Танцы -->
+        <div class="modal-overlay" id="modal-dance">
+            <div class="modal-content">
+                <button class="modal-close" data-close="modal-dance">✕</button>
+                <div class="modal-icon">💃</div>
+                <h3 class="modal-title">Танцы — <span class="highlight">моя страсть</span></h3>
+                <div class="modal-text">
+                    Я занимаюсь танцами <strong>с 4 лет</strong> — это больше 10 лет моей жизни! 🩰
+                    <br><br>
+                    Часто занимаю <strong>первые места</strong> на конкурсах и соревнованиях.
+                    Танцы научили меня дисциплине, грации и тому, что упорство всегда приводит к победе. 🏆
+                    <br><br>
+                    Каждое выступление — это маленькая история, которую я рассказываю через движение.
+                </div>
+                <div class="modal-tags">
+                    <span class="modal-tag">🩰 С 4 лет</span>
+                    <span class="modal-tag">🏆 Первые места</span>
+                    <span class="modal-tag">💪 Дисциплина</span>
+                    <span class="modal-tag">✨ Грация</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модалка: Рисование -->
+        <div class="modal-overlay" id="modal-draw">
+            <div class="modal-content">
+                <button class="modal-close" data-close="modal-draw">✕</button>
+                <div class="modal-icon">🎨</div>
+                <h3 class="modal-title">Рисование — <span class="highlight">моё призвание</span></h3>
+                <div class="modal-text">
+                    Я раньше занималась рисованием <strong>с преподавателем</strong> — это были
+                    незабываемые уроки, где я училась видеть мир в цвете и формах. 🖌️
+                    <br><br>
+                    Сейчас я хочу <strong>связать с рисованием свою профессию</strong> — мечтаю стать
+                    дизайнером или иллюстратором. Ведь это так здорово — создавать красивое
+                    и вдохновлять людей своим творчеством! 🌸
+                </div>
+                <div class="modal-tags">
+                    <span class="modal-tag">🎨 С преподавателем</span>
+                    <span class="modal-tag">💼 Хочу в профессию</span>
+                    <span class="modal-tag">🖌️ Иллюстрация</span>
+                    <span class="modal-tag">✨ Вдохновение</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модалка: Коты -->
+        <div class="modal-overlay" id="modal-cats">
+            <div class="modal-content">
+                <button class="modal-close" data-close="modal-cats">✕</button>
+                <div class="modal-icon">🐱</div>
+                <h3 class="modal-title">Коты — <span class="highlight">мои любимцы</span></h3>
+                <div class="modal-text">
+                    Я просто <strong>обожаю котиков</strong>! 🐈
+                    <br><br>
+                    У меня отлично получается <strong>ладить с животными</strong> — я чувствую их
+                    настроение и знаю, как подойти к каждому. Коты отвечают мне доверием и любовью.
+                    <br><br>
+                    Кстати, у моей бабушки живёт <strong>замечательный кот</strong> — мы с ним
+                    лучшие друзья! Когда я приезжаю в гости, он всегда встречает меня у дверей. 🤗
+                </div>
+                <div class="modal-tags">
+                    <span class="modal-tag">🐈 Люблю котиков</span>
+                    <span class="modal-tag">🤗 Лажу с животными</span>
+                    <span class="modal-tag">🐾 Бабушкин кот</span>
+                    <span class="modal-tag">💕 Дружба</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модалка: Закаты -->
+        <div class="modal-overlay" id="modal-sunset">
+            <div class="modal-content">
+                <button class="modal-close" data-close="modal-sunset">✕</button>
+                <div class="modal-icon">🌅</div>
+                <h3 class="modal-title">Закаты — <span class="highlight">моя любовь</span></h3>
+                <div class="modal-text">
+                    Я обожаю <strong>фотографировать закаты</strong>! 📸
+                    <br><br>
+                    Каждый закат уникален — небо переливается розовым, оранжевым и фиолетовым,
+                    и каждый раз это маленькое чудо. Я стараюсь не пропускать ни одного
+                    красивого заката и сохраняю их в своей коллекции.
+                    <br><br>
+                    Мне часто говорят, что мои фотографии получаются <strong>великолепными</strong>!
+                    Для меня закат — это время остановиться, выдохнуть и просто насладиться
+                    красотой мира. 🌇
+                </div>
+                <div class="modal-tags">
+                    <span class="modal-tag">📸 Фотограф</span>
+                    <span class="modal-tag">🌇 Небо</span>
+                    <span class="modal-tag">💕 Красота</span>
+                    <span class="modal-tag">✨ Вдохновение</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модалка: Сап-борд -->
+        <div class="modal-overlay" id="modal-sup">
+            <div class="modal-content">
+                <button class="modal-close" data-close="modal-sup">✕</button>
+                <div class="modal-icon">🏄‍♀️</div>
+                <h3 class="modal-title">Сап-борд — <span class="highlight">моё лето</span></h3>
+                <div class="modal-text">
+                    Я <strong>люблю плавать на сап-борде</strong>! 🌊
+                    <br><br>
+                    Летом я часто беру сап-борд и отправляюсь на <strong>речку</strong>.
+                    Это невероятное чувство — скользить по воде, слушать плеск волн
+                    и наслаждаться солнцем. ☀️
+                    <br><br>
+                    Сап-борд помогает мне расслабиться, побыть наедине с природой
+                    и зарядиться энергией на целый день. А ещё это отличная тренировка
+                    для равновесия и мышц! 💪
+                </div>
+                <div class="modal-tags">
+                    <span class="modal-tag">🌊 На речке</span>
+                    <span class="modal-tag">☀️ Лето</span>
+                    <span class="modal-tag">💪 Заряд энергии</span>
+                    <span class="modal-tag">✨ Природа</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== КОНТАКТЫ ===== -->
+        <section class="section" id="contacts">
+            <div class="section-label">📬 Связь</div>
+            <h2 class="section-title">Давай <span class="highlight">общаться</span></h2>
+            <div class="contact-grid">
+                <a href="mailto:angelina@example.com" class="contact-card">
+                    <span class="emoji">📧</span>
+                    <div>
+                        <div class="label">Email</div>
+                        <div class="value">angelina@example.com</div>
+                    </div>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="emoji">📸</span>
+                    <div>
+                        <div class="label">Instagram</div>
+                        <div class="value">@angelina_codes</div>
+                    </div>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="emoji">💬</span>
+                    <div>
+                        <div class="label">Telegram</div>
+                        <div class="value">@angelina_dev</div>
+                    </div>
+                </a>
+                <a href="#" class="contact-card">
+                    <span class="emoji">🐙</span>
+                    <div>
+                        <div class="label">GitHub</div>
+                        <div class="value">github.com/angelina</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== ФУТЕР ===== -->
+        <footer>
+            <span>© 2025 Ангелина. Сделано с <span class="heart">♥</span></span>
+            <span>14 лет. Код — моя суперсила 🚀</span>
+        </footer>
+
+    </div>
+
+    <!-- ===== СКРИПТ СЛАЙДЕРА ===== -->
+    <script>
+        const container = document.getElementById('sliderContainer');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        const dotsContainer = document.getElementById('dotsContainer');
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.dataset.index = i;
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateDots() {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentIndex = index;
+            container.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+            resetAutoSlide();
+        }
+
+        function nextSlide() {
+            goToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentIndex - 1);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+
+        let startX = 0;
+        let isSwiping = false;
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+
+        sliderWrapper.addEventListener('touchstart', (e) => {
+            startX = e.changedTouches[0].screenX;
+            isSwiping = true;
+        });
+
+        sliderWrapper.addEventListener('touchend', (e) => {
+            if (!isSwiping) return;
+            const endX = e.changedTouches[0].screenX;
+            const diff = startX - endX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) nextSlide();
+                else prevSlide();
+            }
+            isSwiping = false;
+        });
+
+        autoSlideInterval = setInterval(nextSlide, 5000);
+
+        sliderWrapper.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+        sliderWrapper.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        });
+
+        let mouseDown = false;
+        let mouseStartX = 0;
+
+        sliderWrapper.addEventListener('mousedown', (e) => {
+            mouseDown = true;
+            mouseStartX = e.screenX;
+        });
+
+        sliderWrapper.addEventListener('mouseup', (e) => {
+            if (!mouseDown) return;
+            mouseDown = false;
+            const diff = mouseStartX - e.screenX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) nextSlide();
+                else prevSlide();
+            }
+        });
+
+        sliderWrapper.addEventListener('mouseleave', () => {
+            mouseDown = false;
+        });
+
+        // ===== СКРИПТ МОДАЛЬНЫХ ОКОН =====
+        document.querySelectorAll('.about-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const modalId = this.dataset.modal;
+                const modal = document.getElementById(`modal-${modalId}`);
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        document.querySelectorAll('.modal-close').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const modal = this.closest('.modal-overlay');
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
