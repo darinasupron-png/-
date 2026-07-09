@@ -1057,6 +1057,32 @@
             color: var(--text-light);
         }
 
+        /* ===== СЕКЦИЯ С ИГРОЙ ===== */
+        .game-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(255, 107, 157, 0.15);
+            border: 1px solid rgba(255, 107, 157, 0.1);
+            background: #1a0a14;
+        }
+
+        .game-container iframe {
+            display: block;
+            width: 100%;
+            height: 500px;
+            border: none;
+            background: #1a0a14;
+        }
+
+        .game-fullscreen-btn {
+            text-align: center;
+            margin-top: 16px;
+        }
+
         /* ===== КОНТАКТЫ ===== */
         .contact-grid {
             display: grid;
@@ -1163,11 +1189,17 @@
             .audio-volume {
                 display: none;
             }
+            .game-container iframe {
+                height: 400px;
+            }
         }
 
         @media (max-width: 768px) {
             .about-cards {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            .game-container iframe {
+                height: 350px;
             }
         }
 
@@ -1237,11 +1269,17 @@
             .audio-volume {
                 display: none;
             }
+            .game-container iframe {
+                height: 300px;
+            }
         }
 
         @media (max-width: 420px) {
             .about-cards {
                 grid-template-columns: 1fr;
+            }
+            .game-container iframe {
+                height: 250px;
             }
         }
 
@@ -1311,6 +1349,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#projects">Проекты</a></li>
+                <li><a href="#game">Игра</a></li>
                 <li><a href="#skills">Навыки</a></li>
                 <li><a href="#about">Обо мне</a></li>
                 <li><a href="#contacts">Контакты</a></li>
@@ -1332,6 +1371,7 @@
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">🚀 Мои проекты</a>
+                    <a href="#game" class="btn btn-secondary">🎮 Поиграть</a>
                     <a href="#contacts" class="btn btn-secondary">📬 Связаться</a>
                 </div>
             </div>
@@ -1444,6 +1484,34 @@
                 <button class="slider-btn" id="prevBtn">‹</button>
                 <div class="slider-dots" id="dotsContainer"></div>
                 <button class="slider-btn" id="nextBtn">›</button>
+            </div>
+        </section>
+
+        <!-- ===== ИГРА CAT RUNNER ===== -->
+        <section class="section" id="game">
+            <div class="section-label">🎮 Игровой проект</div>
+            <h2 class="section-title">Поиграй в <span class="highlight">Cat Runner</span></h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px; font-weight: 300;">
+                Помоги котику прыгать через цветы и бабочек! Нажми <strong style="color: var(--pink-light);">ПРОБЕЛ</strong> чтобы прыгнуть.
+            </p>
+
+            <div class="game-container">
+                <iframe
+                    src="https://darinasupron-png.github.io/Game/"
+                    loading="lazy"
+                    allow="autoplay"
+                    title="Cat Runner игра"
+                ></iframe>
+            </div>
+
+            <div class="game-fullscreen-btn">
+                <a
+                    href="https://darinasupron-png.github.io/Game/"
+                    target="_blank"
+                    class="btn btn-primary"
+                >
+                    🚀 Играть на полном экране
+                </a>
             </div>
         </section>
 
@@ -1702,7 +1770,7 @@
 
     </div>
 
-    <!-- ===== СКРИПТ СЛАЙДЕРА ===== -->
+    <!-- ===== СКРИПТ ===== -->
     <script>
         // ===== СЛАЙДЕР =====
         const container = document.getElementById('sliderContainer');
@@ -1858,14 +1926,12 @@
 
         let isPlaying = false;
 
-        // Форматирование времени
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
             const secs = Math.floor(seconds % 60);
             return `${mins}:${secs.toString().padStart(2, '0')}`;
         }
 
-        // Обновление времени
         function updateTime() {
             if (audio.duration) {
                 const current = audio.currentTime;
@@ -1875,15 +1941,12 @@
             }
         }
 
-        // Загрузка метаданных
         audio.addEventListener('loadedmetadata', () => {
             timeDisplay.textContent = `0:00 / ${formatTime(audio.duration)}`;
         });
 
-        // Обновление при воспроизведении
         audio.addEventListener('timeupdate', updateTime);
 
-        // Кнопка Play/Pause
         playBtn.addEventListener('click', () => {
             if (isPlaying) {
                 audio.pause();
@@ -1898,7 +1961,6 @@
             }
         });
 
-        // Прогресс-бар
         progressBar.addEventListener('input', () => {
             if (audio.duration) {
                 const time = (progressBar.value / 100) * audio.duration;
@@ -1906,7 +1968,6 @@
             }
         });
 
-        // Громкость
         volumeBar.addEventListener('input', () => {
             audio.volume = volumeBar.value / 100;
             updateVolumeIcon();
@@ -1923,7 +1984,6 @@
             }
         }
 
-        // Клик по иконке громкости — выключить/включить звук
         let wasMuted = false;
         volumeIcon.addEventListener('click', () => {
             if (audio.volume > 0) {
@@ -1938,10 +1998,8 @@
             }
         });
 
-        // Автоматическое обновление иконки громкости
         audio.addEventListener('volumechange', updateVolumeIcon);
 
-        // При окончании трека
         audio.addEventListener('ended', () => {
             playBtn.textContent = '▶';
             playBtn.classList.remove('playing');
@@ -1950,7 +2008,6 @@
             timeDisplay.textContent = `0:00 / ${formatTime(audio.duration)}`;
         });
 
-        // Обработка ошибки загрузки файла
         audio.addEventListener('error', () => {
             console.warn('Файл "Шёпот прибоя.mp3" не найден. Убедись, что он лежит в той же папке.');
             playBtn.style.opacity = '0.5';
