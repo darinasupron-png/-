@@ -439,6 +439,18 @@
             transform: translateY(-3px);
         }
 
+        /* Стиль для кнопки Telegram */
+        .btn-telegram {
+            background: linear-gradient(135deg, #0088cc, #006699);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.2);
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 60px rgba(0, 136, 204, 0.35);
+        }
+
         /* ===== АВАТАР ===== */
         .hero-avatar {
             display: flex;
@@ -1083,6 +1095,66 @@
             margin-top: 16px;
         }
 
+        /* ===== БЛОК С БОТОМ ===== */
+        .bot-section {
+            background: var(--dark-card);
+            border: 1px solid rgba(255, 107, 157, 0.06);
+            border-radius: 20px;
+            padding: 35px 40px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        .bot-section:hover {
+            border-color: var(--border-glow);
+        }
+
+        .bot-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .bot-icon {
+            font-size: 48px;
+        }
+
+        .bot-text h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .bot-text p {
+            color: var(--text-muted);
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        .bot-link-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #0088cc, #006699);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(0, 136, 204, 0.15);
+            white-space: nowrap;
+        }
+
+        .bot-link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px rgba(0, 136, 204, 0.3);
+        }
+
         /* ===== КОНТАКТЫ ===== */
         .contact-grid {
             display: grid;
@@ -1192,6 +1264,14 @@
             .game-container iframe {
                 height: 400px;
             }
+            .bot-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 24px;
+            }
+            .bot-info {
+                flex-direction: column;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1271,6 +1351,17 @@
             }
             .game-container iframe {
                 height: 300px;
+            }
+            .bot-section {
+                padding: 24px 18px;
+            }
+            .bot-text h3 {
+                font-size: 17px;
+            }
+            .bot-link-btn {
+                font-size: 13px;
+                padding: 10px 24px;
+                white-space: normal;
             }
         }
 
@@ -1352,6 +1443,7 @@
                 <li><a href="#game">Игра</a></li>
                 <li><a href="#skills">Навыки</a></li>
                 <li><a href="#about">Обо мне</a></li>
+                <li><a href="#bot">Мой бот</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
         </header>
@@ -1726,6 +1818,34 @@
             </div>
         </div>
 
+        <!-- ===== БЛОК С TELEGRAM БОТОМ ===== -->
+        <section class="section" id="bot">
+            <div class="section-label">🤖 Мой бот</div>
+            <h2 class="section-title">Телеграм-бот <span class="highlight">AngelinaITbot</span></h2>
+            
+            <div class="bot-section">
+                <div class="bot-info">
+                    <div class="bot-icon">🤖</div>
+                    <div class="bot-text">
+                        <h3>AngelinaITbot</h3>
+                        <p>Мой Telegram бот на Python с Mistral AI — общайся, задавай вопросы, получай помощь!</p>
+                    </div>
+                </div>
+                <a href="https://t.me/AngelinaITbot" target="_blank" class="bot-link-btn">
+                    💬 Перейти в бота
+                </a>
+            </div>
+            
+            <div style="margin-top: 16px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                <a href="https://t.me/iitgbot2" target="_blank" class="btn btn-secondary" style="font-size: 13px;">
+                    📱 iitgbot2
+                </a>
+                <a href="https://t.me/AngelinaITbot" target="_blank" class="btn btn-primary" style="font-size: 13px;">
+                    🤖 AngelinaITbot
+                </a>
+            </div>
+        </section>
+
         <!-- ===== КОНТАКТЫ ===== -->
         <section class="section" id="contacts">
             <div class="section-label">📬 Связь</div>
@@ -1738,18 +1858,18 @@
                         <div class="value">angelina@example.com</div>
                     </div>
                 </a>
+                <a href="https://t.me/AngelinaITbot" target="_blank" class="contact-card">
+                    <span class="emoji">🤖</span>
+                    <div>
+                        <div class="label">Telegram Бот</div>
+                        <div class="value">@AngelinaITbot</div>
+                    </div>
+                </a>
                 <a href="#" class="contact-card">
                     <span class="emoji">📸</span>
                     <div>
                         <div class="label">Instagram</div>
                         <div class="value">@angelina_codes</div>
-                    </div>
-                </a>
-                <a href="#" class="contact-card">
-                    <span class="emoji">💬</span>
-                    <div>
-                        <div class="label">Telegram</div>
-                        <div class="value">@angelina_dev</div>
                     </div>
                 </a>
                 <a href="#" class="contact-card">
